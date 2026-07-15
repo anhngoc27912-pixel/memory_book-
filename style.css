@@ -59,3 +59,32 @@ button:hover{
     line-height:1.8;
     max-width:700px;
 }
+.hidden{
+    display:none;
+}
+
+#letterForm{
+    margin:40px auto;
+    background:white;
+    padding:35px;
+    width:500px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+#letterForm input,
+#letterForm textarea{
+    width:100%;
+    padding:15px;
+    margin:15px 0;
+    border:none;
+    border-radius:15px;
+    background:#fff7fa;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+#letterForm textarea{
+    height:180px;
+    resize:none;
+}
