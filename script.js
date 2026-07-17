@@ -21,3 +21,28 @@ openButton.addEventListener("click", () => {
     },300);
 
 });
+// ===== MUSIC =====
+
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+let isPlaying = false;
+
+// Âm lượng 35%
+music.volume = 0.35;
+
+musicBtn.addEventListener("click", async () => {
+    try {
+        if (!isPlaying) {
+            await music.play();
+            musicBtn.innerHTML = "⏸ Pause";
+            isPlaying = true;
+        } else {
+            music.pause();
+            musicBtn.innerHTML = "🎵 Play Music";
+            isPlaying = false;
+        }
+    } catch (error) {
+        console.error(error);
+    }
+});
