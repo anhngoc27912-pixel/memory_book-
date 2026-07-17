@@ -152,3 +152,99 @@ button{
 }
 
 }
+/* Clouds */
+
+.cloud{
+    position:fixed;
+    background:white;
+    opacity:.45;
+    border-radius:999px;
+    filter:blur(2px);
+    z-index:-1;
+}
+
+.cloud::before,
+.cloud::after{
+    content:"";
+    position:absolute;
+    background:white;
+    border-radius:50%;
+}
+
+.cloud1{
+    width:180px;
+    height:55px;
+    top:90px;
+    left:-220px;
+    animation:cloudMove 55s linear infinite;
+}
+
+.cloud1::before{
+    width:65px;
+    height:65px;
+    left:20px;
+    top:-28px;
+}
+
+.cloud1::after{
+    width:80px;
+    height:80px;
+    right:25px;
+    top:-38px;
+}
+
+.cloud2{
+    width:150px;
+    height:45px;
+    top:220px;
+    left:-180px;
+    animation:cloudMove 70s linear infinite;
+}
+
+.cloud2::before{
+    width:55px;
+    height:55px;
+    left:18px;
+    top:-22px;
+}
+
+.cloud2::after{
+    width:65px;
+    height:65px;
+    right:18px;
+    top:-30px;
+}
+
+.cloud3{
+    width:210px;
+    height:60px;
+    top:420px;
+    left:-260px;
+    animation:cloudMove 85s linear infinite;
+}
+
+.cloud3::before{
+    width:70px;
+    height:70px;
+    left:25px;
+    top:-28px;
+}
+
+.cloud3::after{
+    width:85px;
+    height:85px;
+    right:25px;
+    top:-38px;
+}
+
+@keyframes cloudMove{
+
+from{
+    transform:translateX(0);
+}
+
+to{
+    transform:translateX(calc(100vw + 500px));
+}
+
+}
