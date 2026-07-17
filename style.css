@@ -280,3 +280,35 @@ button:hover{
     from{transform:translateX(0);}
     to{transform:translateX(calc(100vw + 520px));}
 }
+/* ---------- Sun ---------- */
+
+.sun{
+    position:fixed;
+    top:60px;
+    right:70px;
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:radial-gradient(circle,#FFE78C,#FFD35E,#FFC83D);
+    box-shadow:
+        0 0 35px rgba(255,220,100,.6),
+        0 0 80px rgba(255,220,100,.35);
+    animation:sunFloat 5s ease-in-out infinite;
+    z-index:-1;
+}
+
+@keyframes sunFloat{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
