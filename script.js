@@ -30,8 +30,8 @@ const musicBtn = document.getElementById("musicBtn");
 
 let isPlaying = false;
 
-// Âm lượng 35%
-music.volume = 0.35;
+// Âm lượng 50%
+music.volume = 0.5;
 
 musicBtn.addEventListener("click", async () => {
     try {
