@@ -9,26 +9,23 @@ html{
 }
 
 body{
-    font-family:"Segoe UI",sans-serif;
+    font-family:"Segoe UI",Arial,sans-serif;
     background:
-    radial-gradient(circle at top right,#ffeaa7 0%,transparent 25%),
-    radial-gradient(circle at top left,#fff7cc 0%,transparent 20%),
-    linear-gradient(180deg,#fffdf8,#fff5ef,#ffeef5);
+        radial-gradient(circle at top right,#FFE8A3 0%,transparent 25%),
+        radial-gradient(circle at top left,#FFF8D8 0%,transparent 20%),
+        linear-gradient(180deg,#FFFDF9,#FFF6EE,#FFEFF6);
     color:#555;
     overflow-x:hidden;
 }
 
-/* nền ánh nắng */
 body::before{
     content:"";
     position:fixed;
     inset:0;
     background:
-    radial-gradient(circle at 85% 10%,
-    rgba(255,223,100,.35),
-    transparent 35%);
+        radial-gradient(circle at 85% 10%,rgba(255,220,120,.35),transparent 35%);
     pointer-events:none;
-    z-index:-2;
+    z-index:-1;
 }
 
 .hero{
@@ -36,223 +33,126 @@ body::before{
     display:flex;
     justify-content:center;
     align-items:center;
-    text-align:center;
     padding:40px 20px;
 }
 
 .hero-content{
-
     width:min(900px,92%);
-
-    background:rgba(255,255,255,.58);
-
-    backdrop-filter:blur(18px);
-
+    background:rgba(255,255,255,.62);
+    backdrop-filter:blur(16px);
     border-radius:35px;
-
-    padding:70px 60px;
-
-    box-shadow:0 25px 50px rgba(0,0,0,.08);
-
+    padding:65px 55px;
+    text-align:center;
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+    animation:float 6s ease-in-out infinite;
 }
 
 .hero-content h1{
-
-    font-size:72px;
-
-    color:#ef8eb2;
-
+    font-size:68px;
+    color:#EF8EB2;
     margin-bottom:20px;
-
 }
 
 .subtitle{
-
-    font-size:30px;
-
+    font-size:28px;
     color:#666;
-
-    margin-bottom:35px;
-
+    line-height:1.6;
+    margin-bottom:40px;
 }
 
 button{
-
-    background:linear-gradient(135deg,#ff8fb5,#f36ca2);
-
+    background:linear-gradient(135deg,#FF9DBD,#F26CA4);
     color:white;
-
     border:none;
-
-    padding:20px 60px;
-
+    padding:20px 55px;
     border-radius:999px;
-
     font-size:22px;
-
     font-weight:600;
-
     cursor:pointer;
-
     transition:.35s;
-
-    box-shadow:0 12px 35px rgba(243,108,162,.35);
-
+    box-shadow:0 15px 35px rgba(242,108,164,.35);
 }
 
 button:hover{
-
-    transform:translateY(-5px) scale(1.04);
-
-    box-shadow:0 20px 40px rgba(243,108,162,.45);
-
+    transform:translateY(-4px) scale(1.04);
+    box-shadow:0 22px 40px rgba(242,108,164,.45);
 }
 
 .quote{
-
     margin-top:45px;
-
-    font-size:24px;
-
+    font-size:22px;
+    color:#777;
     line-height:1.8;
-
-    color:#666;
-
     font-style:italic;
-
 }
 
 .hidden{
-
     display:none;
-
 }
 
 #letterForm{
-
     width:min(900px,92%);
-
     margin:70px auto;
-
     padding:25px;
-
-    border-radius:30px;
-
-    background:rgba(255,255,255,.72);
-
+    background:rgba(255,255,255,.70);
     backdrop-filter:blur(16px);
-
+    border-radius:30px;
     box-shadow:0 20px 45px rgba(0,0,0,.08);
-
+    animation:fadeUp .8s ease;
 }
 
 #letterForm iframe{
-
     width:100%;
-
     min-height:900px;
-
     border:none;
-
-    border-radius:20px;
-
+    border-radius:22px;
     background:white;
-
-}
-
-/* hiệu ứng nổi nhẹ */
-
-.hero-content{
-
-    animation:float 5s ease-in-out infinite;
-
 }
 
 @keyframes float{
-
-0%{
-
-transform:translateY(0);
-
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+    100%{transform:translateY(0);}
 }
 
-50%{
-
-transform:translateY(-8px);
-
-}
-
-100%{
-
-transform:translateY(0);
-
-}
-
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(60px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 @media(max-width:768px){
 
 .hero-content{
-
-padding:35px 25px;
-
+    padding:35px 25px;
 }
 
 .hero-content h1{
-
-font-size:48px;
-
+    font-size:46px;
 }
 
 .subtitle{
-
-font-size:22px;
-
+    font-size:21px;
 }
 
 .quote{
-
-font-size:18px;
-
+    font-size:17px;
 }
 
 button{
-
-font-size:18px;
-
-padding:16px 36px;
-
+    width:100%;
+    font-size:18px;
+    padding:16px;
 }
 
 #letterForm{
-
-margin:30px auto;
-
+    margin:30px auto;
+    padding:15px;
 }
-
-}
-.show{
-
-    animation:appear .8s ease;
-
-}
-
-@keyframes appear{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(80px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
 
 }
