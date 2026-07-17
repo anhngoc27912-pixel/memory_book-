@@ -312,3 +312,65 @@ button:hover{
     }
 
 }
+/* ---------- Sparkles ---------- */
+
+.sparkle{
+    position:fixed;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#fff8c9;
+    box-shadow:0 0 15px rgba(255,230,120,.9);
+    animation:twinkle 3s ease-in-out infinite;
+    z-index:-1;
+}
+
+.s1{
+    top:90px;
+    right:180px;
+    animation-delay:0s;
+}
+
+.s2{
+    top:150px;
+    right:120px;
+    animation-delay:.8s;
+}
+
+.s3{
+    top:210px;
+    right:210px;
+    animation-delay:1.5s;
+}
+
+.s4{
+    top:120px;
+    right:280px;
+    animation-delay:2s;
+}
+
+.s5{
+    top:260px;
+    right:150px;
+    animation-delay:2.8s;
+}
+
+.s6{
+    top:190px;
+    right:320px;
+    animation-delay:3.5s;
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+        transform:scale(.6);
+        opacity:.3;
+    }
+
+    50%{
+        transform:scale(1.6);
+        opacity:1;
+    }
+
+}
