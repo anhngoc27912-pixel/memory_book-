@@ -25,6 +25,7 @@ openButton.addEventListener("click", () => {
 
 const music = document.getElementById("bgMusic");
 console.log(music);
+
 const musicBtn = document.getElementById("musicBtn");
 
 let isPlaying = false;
